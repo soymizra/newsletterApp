@@ -8,6 +8,10 @@
       </div>
       <h4 class="card-title">Light card title</h4>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <button type="button" class="btn btn-outline-secondary btn-lg my-2 my-sm-0">
+        <span class="large material-icons text-primary" style="font-weight: bold">email</span>
+        Subscribe
+      </button>
     </div>
   </div>
 </div>
