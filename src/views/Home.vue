@@ -5,9 +5,7 @@
       <h5 class="text-muted">Packed with the trends, news and links you need to be smart, informaed, and a head of the curve.</h5>
     </div>
     <div class="row">
-      <div v-for="newsletter in lists" :key="newsletter.id">
-        <card :card_newsletter="newsletter"></card>
-      </div>
+        <card v-for="newsletter in lists" :key="newsletter.id" :card_newsletter="newsletter"></card>
     </div>
   </div>
 </template>

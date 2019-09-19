@@ -45,7 +45,7 @@ import axios from 'axios';
     },
     methods: {
        async getTags ()  {
-        let url = process.env.VUE_APP_URL_API_NEWSLETTER;
+        let url = process.env.VUE_APP_URL_API_TAGS;
         let resp = await axios.get(url)
         // eslint-disable-next-line no-console
         console.log('Este es env',url);

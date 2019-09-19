@@ -1,5 +1,5 @@
 <template>
-<div class="col-sm-12">
+<div class="col-sm-12 col-md-3">
   <div class="card mb-3 text-center" style="">
     <div class="card-body">
       <div style="width: 5rem; height: 5rem; display: inline-block; border-radius: 10rem; overflow:hidden">
