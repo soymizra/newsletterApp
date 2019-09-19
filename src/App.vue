@@ -34,10 +34,22 @@
 
 <script>
 import ComponentSearch from '@/components/ComponentSearch.vue'
+import axios from 'axios';
 
   export default{
     components: {
       ComponentSearch
+    },
+    created(){
+      this.getTags();
+    },
+    methods: {
+       async getTags ()  {
+        let url = process.env.VUE_APP_URL_API_NEWSLETTER;
+        let resp = await axios.get(url)
+        // eslint-disable-next-line no-console
+        console.log('Este es env',url);
+      }
     }
   }
 </script>
