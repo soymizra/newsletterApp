@@ -1,11 +1,22 @@
 <template>
   <div class="container p-3">
-    <div class="row d-flex flex-column justify-content-center p-5 text-center">
+    <div class="row d-flex flex-column justify-content-center p-3 text-center border-bottom">
       <h2>Real news, curated by real humans</h2>
       <h5 class="text-muted">Packed with the trends, news and links you need to be smart, informaed, and a head of the curve.</h5>
+      <hr>
     </div>
-    <div class="row">
+    <div class="row p-4">
         <card v-for="newsletter in lists" :key="newsletter.id" :card_newsletter="newsletter"></card>
+    </div>
+    <div class="row d-flex flex-column justify-content-center p-3 text-center border-bottom">
+      <h2>Up and coming</h2>
+      <h5 class="text-muted">
+        if these newsletters reach their goals (or get <a href="#">sponsorship</a>), well bring on expert writers and launch them.
+        Vote for all your favorites:
+      </h5>
+    </div>
+    <div class="row p-4">
+        <CardVote v-for="newsletter in lists" :key="newsletter.id" :card_newsletter="newsletter"></CardVote>
     </div>
   </div>
 </template>
@@ -13,13 +24,15 @@
 <script>
 // @ is an alias to /src
 import Card from '@/components/card.vue'
+import CardVote from '@/components/cardVote.vue'
 
 import axios from 'axios'
 
 export default {
   name: 'home',
   components: {
-    Card
+    Card,
+    CardVote
   },
   created () {
     this.getTags();
@@ -35,8 +48,14 @@ export default {
         let resp = await axios.get(url)
         this.lists = resp.data
         // eslint-disable-next-line no-console
-        console.log(this.lists[0])
+        console.log(this.lists)
       }
   }
 }
 </script>
+
+<style>
+  .border-bottom{
+    border-bottom: 5px solid gray;
+  }
+</style>
