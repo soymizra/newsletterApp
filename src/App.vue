@@ -2,7 +2,7 @@
   <div id="app">
     <Navigation />
     <router-view/>
-    <footer class="container-fluid bg-primary">
+    <footer class="container-fluid bg-primary mt-5">
         <div class="container  p-3 text-white  rounded-top">
             <div class="row d-flex justify-content-center p-3">
                 <ul class="footerNav">
@@ -22,7 +22,7 @@
               
             </div>
             <div class="row d-flex justify-content-center p-3">
-              Developed by    <a href="https://soymizra.github.io/portafolio/" class="text-white" style="text-decoration: underline; margin-left: .5rem">soymizra</a>
+              Developed by    <a href="https://soymizra.github.io/portafolio/" target="_blank" class="text-white" style="text-decoration: underline; margin-left: .5rem">soymizra</a>
             </div>
         </div>
     </footer>
