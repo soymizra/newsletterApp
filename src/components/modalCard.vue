@@ -15,6 +15,7 @@
                 <button type="button" class="btn btn-primary">Save changes</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
+           
             </div>
         </div>
     </div>
@@ -24,8 +25,25 @@
 
 export default {
 
-    name: 'modalCard'
+    name: 'modalCard',
+    props: ['newslatter_data']
 
 }
 
 </script>
+
+<style scoped>
+.btn-sponsorship {
+  color: #ff5c03 !important;
+  padding: 0.6em;
+  border: 1px solid;
+  border-color: #ff5c03;
+  border-radius: 0.25rem;
+  font-weight: 800;
+}
+.btn-sponsorship:hover {
+  color: #fff !important;
+  background: #ff5c03;
+  transition: 0.5s;
+}
+</style>

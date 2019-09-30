@@ -7,6 +7,7 @@
     </div>
     <div class="row mt-5">
         <card v-for="newsletter in lists" :key="newsletter.id" :card_newsletter="newsletter"></card>
+        <modalCard :newslatter_data="newsletter"></modalCard>
     </div>
     <div class="row d-flex flex-column justify-content-center p-3 mt-5 text-center border-bottom">
       <h2>Up and coming</h2>
@@ -17,7 +18,9 @@
     </div>
     <div class="row mt-5">
         <CardVote v-for="newsletter in upComing" :key="newsletter.id" :card_newsletter="newsletter"></CardVote>
+        <modalCard :newslatter_data="newsletter"></modalCard>
     </div>
+    
   </div>
 </template>
 
@@ -25,6 +28,7 @@
 // @ is an alias to /src
 import Card from '@/components/card.vue'
 import CardVote from '@/components/cardVote.vue'
+import modalCard from '@/components/modalCard.vue'
 
 import axios from 'axios'
 
@@ -32,7 +36,8 @@ export default {
   name: 'home',
   components: {
     Card,
-    CardVote
+    CardVote,
+    modalCard
   },
   created () {
     this.getTags();

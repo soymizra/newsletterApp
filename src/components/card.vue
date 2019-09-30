@@ -9,7 +9,8 @@
       <h4 class="card-title">{{ card_newsletter.title }}</h4>
       <p class="card-text text-muted">{{ card_newsletter.description }}</p>
       <br>
-      <button type="button" class="btn btn-outline-primary btn-block my-2 my-sm-0">
+      <button type="button" class="btn btn-outline-primary btn-block my-2 my-sm-0"
+        data-toggle="modal" :data-target="'#newsletter'+card_newsletter.id">
         <span class="large material-icons" style="font-weight: bold">email</span>
         Subscribe
       </button>

@@ -18,6 +18,10 @@
         <span class="large material-icons" style="font-weight: bold">email</span>
         Vote
       </button>
+       <div class="container form-group mt-3">
+              <input type="email" class="form-control" placeholder="Enter your email" />
+              <button type="submit" class="btn btn-sponsorship mt-2 btn-block">Subscribe</button>
+            </div>
 
     </div>
   </div>
